@@ -1,0 +1,693 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  position: relative;
+
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  height: 10vh;
+  width: 85vw;
+  left: 10vw;
+  top: 4vh;
+}
+
+.mainheading {
+  font-size: 4rem;
+  color: white;
+}
+
+.showaddtask {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #00A5EC;
+  position: absolute;
+  font-size: 2rem;
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+  border: #00A5EC;
+  left: 75vw;
+  top: 6vh;
+}
+
+.box {
+  height: 30vh;
+  width: 30vw;
+  border: 2px solid white;
+  position: absolute;
+  top: 30vh;
+  left: 33vw;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.popheading {
+  font-size: 2rem;
+  position: absolute;
+  top: 4vh;
+  left: 7vw;
+  color: orangered;
+}
+
+.popinput {
+  top: 12vh;
+  position: absolute;
+  left: 4vw;
+  font-size: 1.5rem;
+  width: 22vw;
+  padding-left: 50px;
+}
+
+.popadd {
+  position: absolute;
+  top: 20vh;
+  left: 7vw;
+  background-color: orangered;
+  border: orangered;
+  border-radius: 16px;
+  width: 7vw;
+  height: 6vh;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.popclose {
+  position: absolute;
+  top: 20vh;
+  left: 16vw;
+  background-color: orangered;
+  border: orangered;
+  border-radius: 16px;
+  width: 7vw;
+  height: 6vh;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.card {
+  height: 50vh;
+  width: 17vw;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+}
+
+.cardheading {
+  font-size: 2rem;
+  color: orange;
+  position: absolute;
+  top: 2vh;
+  width: 16vw;
+  left: 1vw;
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  top: 10vh;
+  width: 17vw;
+}
+
+.itemlist {
+  position: absolute;
+  /* border: 2px solid black; */
+  top: 15vh;
+  left: 2vw;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 15px;
+  font-size: 1.4rem;
+}
+
+.additem {
+  top: 43vh;
+  left: 10vw;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #00A5EC;
+  position: absolute;
+  font-size: 2rem;
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+  border: #00A5EC;
+}
+
+.deletebutton {
+  font-weight: bolder;
+  top: 43vh;
+  left: 14vw;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #00A5EC;
+  position: absolute;
+  font-size: 2rem;
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+  border: #00A5EC;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.cardcontainer {
+  color: white;
+  position: relative;
+  top: 12vh;
+  left: 5vw;
+  display: flex;
+  height: auto;
+  width: 88vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.itempopheading {
+  font-size: 2rem;
+  position: absolute;
+  top: 4vh;
+  left: 7vw;
+  color: orangered;
+}
+
+.itemname {
+  top: 12vh;
+  position: absolute;
+  left: 4vw;
+  font-size: 1.5rem;
+  width: 22vw;
+  padding-left: 50px;
+}
+
+.addbutton {
+  position: absolute;
+  top: 20vh;
+  left: 7vw;
+  background-color: orangered;
+  border: orangered;
+  border-radius: 16px;
+  width: 7vw;
+  height: 6vh;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.closebutton {
+  position: absolute;
+  top: 20vh;
+  left: 16vw;
+  background-color: orangered;
+  border: orangered;
+  border-radius: 16px;
+  width: 7vw;
+  height: 6vh;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.notask {
+  color: white;
+  position: absolute;
+  top: 15vh;
+  font-size: 2rem;
+}
+
+.box2 {
+  height: 30vh;
+  width: 30vw;
+  border: 2px solid white;
+  position: absolute;
+  top: 30vh;
+  left: 33vw;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.back {
+  top: 6vh;
+  left: 10vw;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #00A5EC;
+  position: absolute;
+  font-size: 2rem;
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+  border: #00A5EC;
+}
+.back2{
+  color: white;
+  position: absolute;
+  left: 4vw;
+}
+
+.showaddtask2 {
+  color: white;
+  position: absolute;
+  width: 17vw;
+  cursor: pointer;
+  left: 1vw;
+}
+
+.markdone {
+  background-color: #00A5EC;
+  border-color: #00A5EC;
+  color: white;
+  border-radius: 10px;
+  margin-left: 1vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.itemtext {
+  font-weight: bold;
+}
+
+.singlecard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 20vh;
+}
+
+.itemtextline {
+  text-decoration: line-through;
+  color: red;
+  cursor: pointer;
+  margin-left: 4vw;
+}
+
+@media only screen and (min-width:701px) and (max-width:950px) {
+  .notask {
+    top: 15vh;
+  }
+
+  /* .navbar{
+    width: 0;
+  } */
+  .showaddtask {
+    position: absolute;
+    top: 5vh;
+    left: 75vw;
+  }
+
+  .showaddtask2 {
+    display: none;
+  }
+
+  .box {
+    height: 35vh;
+    width: 60vw;
+    top: 20vh;
+    left: 20vw;
+  }
+
+  .popheading {
+    top: 4vh;
+    left: 12vw;
+    width: 45vw;
+  }
+
+  .popinput {
+    top: 13vh;
+    width: 50vw;
+  }
+
+  .popadd {
+    top: 23vh;
+    left: 10vw;
+    width: 15vw;
+    height: 8vh;
+  }
+
+  .popclose {
+    width: 15vw;
+    height: 8vh;
+    top: 23vh;
+    left: 30vw;
+  }
+
+  .card {
+    height: 55vh;
+    width: 40vw;
+  }
+
+  .cardheading {
+    left: 5vw;
+  }
+
+  .line {
+    top: 10vh;
+    width: 40vw;
+  }
+
+  .itemlist {
+    top: 12vh;
+    left: 8vw;
+    gap: 20px;
+  }
+
+  .additem {
+    top: 47vh;
+    left: 22vw;
+  }
+
+  .deletebutton {
+    top: 47vh;
+    left: 32vw;
+  }
+
+  .box2 {
+    height: 35vh;
+    width: 60vw;
+    top: 20vh;
+    left: 20vw;
+  }
+
+  .itempopheading {
+    top: 4vh;
+    left: 12vw;
+    width: 45vw;
+  }
+
+  .itemname {
+    top: 13vh;
+    width: 50vw;
+  }
+
+  .addbutton {
+    top: 23vh;
+    left: 10vw;
+    width: 15vw;
+    height: 8vh;
+  }
+
+  .closebutton {
+    width: 15vw;
+    height: 8vh;
+    top: 23vh;
+    left: 30vw;
+  }
+
+  .singlecard {
+    top: 35vh;
+  }
+
+  .back {
+    top: 5vh;
+  }
+  .back2{
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width:501px) and (max-width:700px) {
+  .notask {
+    top: 15vh;
+  }
+
+  /* .navbar{
+    width: 0;
+  } */
+  .showaddtask {
+    position: absolute;
+    top: 5vh;
+    left: 75vw;
+  }
+
+  .showaddtask2 {
+    display: none;
+  }
+
+  .box {
+    height: 35vh;
+    width: 60vw;
+    top: 20vh;
+    left: 20vw;
+  }
+
+  .popheading {
+    top: 4vh;
+    left: 12vw;
+    width: 45vw;
+  }
+
+  .popinput {
+    top: 13vh;
+    width: 50vw;
+  }
+
+  .popadd {
+    top: 23vh;
+    left: 10vw;
+    width: 15vw;
+    height: 8vh;
+  }
+
+  .popclose {
+    width: 15vw;
+    height: 8vh;
+    top: 23vh;
+    left: 30vw;
+  }
+
+  .card {
+    height: 55vh;
+    width: 40vw;
+  }
+
+  .cardheading {
+    left: 5vw;
+  }
+
+  .line {
+    top: 10vh;
+    width: 40vw;
+  }
+
+  .itemlist {
+    top: 12vh;
+    left: 8vw;
+    gap: 20px;
+  }
+
+  .additem {
+    top: 47vh;
+    left: 22vw;
+  }
+
+  .deletebutton {
+    top: 47vh;
+    left: 32vw;
+  }
+
+  .box2 {
+    height: 35vh;
+    width: 60vw;
+    top: 20vh;
+    left: 20vw;
+  }
+
+  .itempopheading {
+    top: 4vh;
+    left: 12vw;
+    width: 45vw;
+  }
+
+  .itemname {
+    top: 13vh;
+    width: 50vw;
+  }
+
+  .addbutton {
+    top: 23vh;
+    left: 10vw;
+    width: 15vw;
+    height: 8vh;
+  }
+
+  .closebutton {
+    width: 15vw;
+    height: 8vh;
+    top: 23vh;
+    left: 30vw;
+  }
+
+  .singlecard {
+    top: 35vh;
+  }
+
+  .back {
+    top: 5vh;
+  }
+  .back2{
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width:300px) and (max-width:500px) {
+  .mainheading {
+    font-size: 3rem;
+  }
+
+  .notask {
+    top: 15vh;
+  }
+
+  /* .navbar{
+    width: 0;
+  } */
+  .showaddtask {
+    position: absolute;
+    top: 5vh;
+    left: 75vw;
+  }
+
+  .showaddtask2 {
+    display: none;
+  }
+
+  .box {
+    height: 35vh;
+    width: 90vw;
+    top: 20vh;
+    left: 5vw;
+  }
+
+  .popheading {
+    top: 4vh;
+    left: 10vw;
+    width: 75vw;
+    font-size: 10vw;
+  }
+
+  .popinput {
+    top: 13vh;
+    width: 80vw;
+    font-size: 1.7rem;
+  }
+
+  .popadd {
+    top: 23vh;
+    left: 15vw;
+    width: 25vw;
+    height: 8vh;
+  }
+
+  .popclose {
+    width: 25vw;
+    height: 8vh;
+    top: 23vh;
+    left: 45vw;
+  }
+
+  .cardcontainer {
+    flex-direction: column;
+  }
+
+  .card {
+    left: 3vw;
+    height: 57vh;
+    width: 85vw;
+  }
+
+  .cardheading {
+    left: 15vw;
+  }
+
+  .line {
+    top: 10vh;
+    width: 85vw;
+  }
+
+  .itemlist {
+    top: 12vh;
+    left: 15vw;
+    gap: 15px;
+    font-size: 1.8rem;
+  }
+
+  .additem {
+    top: 50vh;
+    left: 50vw;
+  }
+
+  .deletebutton {
+    top: 50vh;
+    left: 70vw;
+  }
+
+  .box2 {
+    height: 35vh;
+    width: 90vw;
+    top: 20vh;
+    left: 5vw;
+  }
+
+  .itempopheading {
+    top: 4vh;
+    left: 10vw;
+    width: 75vw;
+    font-size: 10vw;
+  }
+
+  .itemname {
+    top: 13vh;
+    width: 80vw;
+    font-size: 1.7rem;
+  }
+
+  .addbutton {
+    top: 23vh;
+    left: 15vw;
+    width: 25vw;
+    height: 8vh;
+  }
+
+  .closebutton {
+    width: 25vw;
+    height: 8vh;
+    top: 23vh;
+    left: 45vw;
+  }
+
+  .singlecard {
+    top: 35vh;
+  }
+
+  .back {
+    top: 5vh;
+  }
+  .back2{
+    display: none;
+  }
+
+}

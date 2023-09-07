@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo js </title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .hide {
+            display: none;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <button class="back hide" onclick="back()"><   <span onclick="back2()"class="back2">back</span></button>
+    <nav class="navbar" id="navbar">
+        <h1 class="mainheading " id="mainheading">Task List</h1>
+        <p id="notask" class="notask" >No Items in the todo list</p>
+    </nav>
+    <button class="showaddtask" onclick="showaddtask()" >+ <span  onclick="showaddtask()" class="showaddtask2">Add item</span></button>
+    <div id="cardcontainer" class="cardcontainer"></div>
+    <div id="singlecard" class="singlecard hide"></div>
+    </div>
+
+    <!-- add task pop -->
+    <div class=" box hide" id="addtaskpop">
+        <h3 class="popheading">Add New List</h3><br>
+        <input type="text" id="cardname" placeholder="Add New List" class="popinput"><br>
+        <button onclick="addcard()" class="popadd">Add</button>
+        <button onclick="hideaddtask()" class="popclose">Close</button>
+    </div>
+
+    <div id="additempopup" class="box2 hide">
+
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
