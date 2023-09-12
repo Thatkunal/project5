@@ -231,22 +231,24 @@ function addcard() {
                 })
 
                 if (issinglecard) {
-                    let copyitem = itemlist.cloneNode(true);
-                    copycard.appendChild(copyitem);
-
+                    // Clone the individual item
+                    let copyitem = item.cloneNode(true);
+                    copycard.querySelector('.itemlist').appendChild(copyitem);
+                
                     let copyitemtext = copyitem.querySelector('.itemtext');
                     let copymarkdone = copyitem.querySelector('.markdone');
-
-
+                
+                    // Attach a new event listener to the cloned markdone button
                     copymarkdone.addEventListener('click', () => {
                         copyitemtext.classList.add('itemtextline');
                         copymarkdone.classList.add('hide');
+                
+                        // Attach a new event listener to the cloned itemtext for toggling
                         copyitemtext.addEventListener('click', () => {
                             copyitemtext.classList.remove('itemtextline');
                             copymarkdone.classList.remove('hide');
                         });
                     });
-
                 }
             })
 
