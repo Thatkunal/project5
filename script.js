@@ -27,7 +27,7 @@ function addcard() {
         issinglecard = false
     }
     if (issinglecard) {
-        back3()
+        back2()
         issinglecard = false
     }
     notask.classList.add('hide')
@@ -160,7 +160,8 @@ function addcard() {
         copycard.lastElementChild.addEventListener('click', () => {
             card.remove()
             copycard.remove()
-            // back().remove
+            back().remove
+            copycardheading.remove()
             if (cardcontainer.innerText == "")
                 notask.classList.remove('hide')
 
@@ -215,18 +216,6 @@ function addcard() {
 
                 additempopup.innerText = ""
 
-
-                // if (issinglecard) {
-                //     let copyitem= item.cloneNode(true);
-                //     copyitem.appendChild(copyitem);
-                //     copyaddbutton.addEventListener("click", function () {
-                //         itemtext.classList.add("markdone");
-                //         markdone.style.display = "none";
-                //     //     //create item clone
-                //     //     //append to copylist
-                //     //     //markdone eventlistner
-                //     })
-                // }
                 // given the cklass
                 itemtext.classList.add('itemtext')
                 markdone.classList.add('markdone')
@@ -242,15 +231,22 @@ function addcard() {
                 })
 
                 if (issinglecard) {
-                    let copyitem= item.cloneNode(true);
-                    copyitem.appendChild(copyitem);
-                    copyaddbutton.addEventListener("click", function () {
-                        itemtext.classList.add("markdone");
-                        markdone.style.display = "none";
-                    //     //create item clone
-                    //     //append to copylist
-                    //     //markdone eventlistner
-                    })
+                    let copyitem = itemlist.cloneNode(true);
+                    copycard.appendChild(copyitem);
+
+                    let copyitemtext = copyitem.querySelector('.itemtext');
+                    let copymarkdone = copyitem.querySelector('.markdone');
+
+
+                    copymarkdone.addEventListener('click', () => {
+                        copyitemtext.classList.add('itemtextline');
+                        copymarkdone.classList.add('hide');
+                        copyitemtext.addEventListener('click', () => {
+                            copyitemtext.classList.remove('itemtextline');
+                            copymarkdone.classList.remove('hide');
+                        });
+                    });
+
                 }
             })
 
@@ -258,12 +254,10 @@ function addcard() {
                 parent.classList.remove('blur')
                 additempopup.classList.add('hide')
                 addbutton.remove()
+                copycardheading.classList.remove('copycardheading')
             })
-
-
-            // parent.firstElementChild.classList.remove('hide')
         })
-         
+
         parent.firstElementChild.classList.remove('hide')
 
     })
